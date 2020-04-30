@@ -1,0 +1,112 @@
+Create customer and account:
+https://localhost:8443/v1/api/auth/signup
+
+input:
+{
+	"userName" : "sun2",
+	"password" : "12345",
+	"foreName" : "Sun2",
+	"surName" : "Nati",
+	"dateOfBirth" : "1986-01-01",
+	"accounts": [
+		{
+			"accountNumber": "100000",
+			"accountType" : "SAVING"
+		}
+		]
+}
+
+output:
+{
+    "id": 3,
+    "foreName": "Sun2",
+    "surName": "Nati",
+    "userName": "sun2",
+    "dateOfBirth": "1986-01-01",
+    "accounts": [
+        {
+            "id": 2,
+            "accountNumber": 100000,
+            "accountType": "SAVING"
+        }
+    ]
+}
+
+####################################################
+
+
+Sign in:
+https://localhost:8443/v1/api/auth/signin
+
+input:
+{
+	"userName" : "sun2",
+	"password" : "12345"
+}
+
+output:
+{
+    "token": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJzdW4yIiwiaWF0IjoxNTg4MjY2MTM0LCJleHAiOjE1ODgzNTI1MzR9.Sg1jESt2SctCHQ5X_X-FDB25RLZzQPIn5qxxhNzpvOj_9VqrOYmalqgHslwxcELM_UCmeha6svB80iPLCeGlLA",
+    "id": 3,
+    "userName": "sun2"
+}
+
+
+##################################################
+
+Get accounts from customer:
+https://localhost:8443/v1/api/customers/3/accounts
+
+output:
+[
+    {
+        "id": 2,
+        "accountNumber": 100000,
+        "accountType": "SAVING"
+    }
+]
+
+
+#######################################################3
+
+Get customer from account
+https://localhost:8443/v1/api/customers/accounts/2
+
+output:
+[
+    {
+        "id": 3,
+        "foreName": "Sun2",
+        "surName": "Nati",
+        "userName": "sun2",
+        "dateOfBirth": "1986-01-01",
+        "accounts": [
+            {
+                "id": 2,
+                "accountNumber": 100000,
+                "accountType": "SAVING"
+            }
+        ]
+    }
+]
+
+#################################################3
+Verify customer account details:
+https://localhost:8443/v1/api/customers/3/accounts/2/validate
+
+Output:
+{
+    "message": "Customer account details are valid!"
+}
+
+
+
+https://localhost:8443/v1/api/customers/3/accounts/1/validate
+output:
+{
+    "message": "Customer and account not matching",
+    "details": [
+        "Customer account details not matching"
+    ]
+}
+
