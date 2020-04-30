@@ -82,7 +82,7 @@ Also you can fnd sample request and response in "/artifacts/sample-request-respo
 
 
 ### Note : 
-Could not test docker build because unable to install Docker on Windows 10 home edition.
+Could not test docker build because unable to install Docker on Windows 10 home edition on which I developed this code.
 
 Some unit and integration tests are still pending
 
