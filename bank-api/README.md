@@ -76,7 +76,7 @@ Authorization = Bearer {jwttoken}
 
 
 
-####Sample endpoints, request and response
+### Sample endpoints, request and response
 You can find "/artifacts/bank-api.postman_collection.json" file inside project root folder which you can import into postman and test the endpoints.
 Also you can fnd sample request and response in "/artifacts/sample-request-response.txt" file.
 
