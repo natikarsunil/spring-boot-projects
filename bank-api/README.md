@@ -81,3 +81,8 @@ You can find "/artifacts/bank-api.postman_collection.json" file inside project r
 Also you can fnd sample request and response in "/artifacts/sample-request-response.txt" file.
 
 
+### Note : 
+Could not test docker build because unable to install Docker on Windows 10 home edition.
+
+Some unit and integration tests are still pending
+
