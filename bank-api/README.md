@@ -21,9 +21,7 @@ points to carry out the following functions:
 
 ### Solution services
 
-The current solution has been developed as micro services built using Spring Boot running on an embedded Tomcat web container.
-
-[bank-api](https://localhost:8443/v1/api/)
+The current solution has been developed as a rest services built using Spring Boot running on an embedded Tomcat web container along with PostgresSQL database.
 
 ### Technologies being used
 
