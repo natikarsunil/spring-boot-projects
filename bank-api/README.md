@@ -54,10 +54,10 @@ https://localhost:5443/v1/api/customers/{customerId}/accounts/{accountId}/valida
 
 
 ### Build and deployment:
-
-Step 1: build an image from Dockerfile using command "docker build ./ -t bank-api"
-Step 2: Once the image is built successfully run command "docker-compose up" 
-Step 3: Create a database in PostgreSQL with name "bankdb"
+Step 1: build the bank-api project using "mvn clean install"
+Step 2: build an image from Dockerfile using command "docker build ./ -t bank-api"
+Step 3: Once the image is built successfully run command "docker-compose up" 
+Step 4: Create a database in PostgreSQL with name "bankdb"
 
 
 ### Execution
